@@ -1,0 +1,332 @@
+{
+  "variables": [],
+  "info": {
+    "name": "task_management",
+    "_postman_id": "a746243c-2c83-49ef-eaa6-bd715d8a04f9",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "url": "localhost:3000/auth/signup",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\": \"denomer\",\n\t\"password\": \"hello@61\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "url": "localhost:3000/auth/login",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\": \"denomer\",\n\t\"password\": \"hello@61\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "logout",
+      "request": {
+        "url": "localhost:3000/auth/logout",
+        "method": "GET",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "KaH1DnFOKiIGKkyuMonU4yAuNRbDZ3IPQ0K3x3OHOBFnWGzZPBnulmYiKb3MvTUrYeH7EbMq",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Change password",
+      "request": {
+        "url": "localhost:3000/users/change-password",
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "VbzedT9PD6lMUYNMlJu7ortLrHj2Oa2oWNMazJtpjHY3HEtbDQR19vIQ0hoiVHwLh8WmuZ40",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"old_password\": \"deepak71\",\n\t\"new_password\": \"denomer41\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Project Create",
+      "request": {
+        "url": "localhost:3000/projects/create",
+        "method": "POST",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "dzNU3AvlfR6qjrTvlDgH3Jfiqayz7AK6kweuDJ2BcFWBTYX7XD4hzn57P0sUCsVIy83zzJlJ",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"backend development\",\n\t\"description\": \"Backend development for final quadrant, done by deepak gupta\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Project list",
+      "request": {
+        "url": "localhost:3000/projects/list",
+        "method": "GET",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "dzNU3AvlfR6qjrTvlDgH3Jfiqayz7AK6kweuDJ2BcFWBTYX7XD4hzn57P0sUCsVIy83zzJlJ",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Project Update ",
+      "request": {
+        "url": "localhost:3000/projects/915fb46b-1285-4da0-a674-f96d452a1c89/update",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "dzNU3AvlfR6qjrTvlDgH3Jfiqayz7AK6kweuDJ2BcFWBTYX7XD4hzn57P0sUCsVIy83zzJlJ",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"Frontend development for ars\",\n\t\"description\": \"This is for forntend developement for ars admin, done by admin\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Project Delete",
+      "request": {
+        "url": "localhost:3000/projects/915fb46b-1285-4da0-a674-f96d452a1c89/delete",
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "dzNU3AvlfR6qjrTvlDgH3Jfiqayz7AK6kweuDJ2BcFWBTYX7XD4hzn57P0sUCsVIy83zzJlJ",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Add Project Members",
+      "request": {
+        "url": "localhost:3000/projects/efa10ac8-19ee-4273-8836-66c3045eafc1/add-members",
+        "method": "POST",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "dzNU3AvlfR6qjrTvlDgH3Jfiqayz7AK6kweuDJ2BcFWBTYX7XD4hzn57P0sUCsVIy83zzJlJ",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n\t{\n\t\t\"username\": \"test1\",\n\t\t\"role\": \"employee\"\n\t},\n\t{\n\t\t\"username\": \"test2\",\n\t\t\"role\": \"employee\"\n\t},\n\t{\n\t\t\"username\": \"test3\",\n\t\t\"role\": \"admin\"\n\t}\t\n]"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Create task for project",
+      "request": {
+        "url": "localhost:3000/projects/efa10ac8-19ee-4273-8836-66c3045eafc1/tasks/create",
+        "method": "POST",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "W8ZAQ9xmeKIYDgFXtBDO1l7KIO86Q74pCx6uI4xLXubx3GDfsuINhpZI5ND1Bu6CiQsX06iW",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"title\": \"sadsadas\",\n\t\"description\": \"asdasdas\",\n\t\"priority\": \"medium\",\n\t\"type\": \"normal\",\n\t\"assignToIds\": [\n\t \"91161db9-5e2b-43b5-a1f3-2f361843a598\",\n\t \"78fcbf6c-accf-4ba1-a943-7951855e9bef\"\n\t],\n\t\"status\": \"to_do\"\n\t\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Get task with or without filter",
+      "request": {
+        "url": {
+          "raw": "localhost:3000/projects/efa10ac8-19ee-4273-8836-66c3045eafc1/tasks/list?status=pending",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "projects",
+            "efa10ac8-19ee-4273-8836-66c3045eafc1",
+            "tasks",
+            "list"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "pending",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "6IFdKGvgYY76JyrNxhksL0ASB8x1SsmRYlNNkMUE2MNSFVux0FXVJEPnNYhdBtUdWghjKPdl",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Update Task for project",
+      "request": {
+        "url": "localhost:3000/projects/efa10ac8-19ee-4273-8836-66c3045eafc1/tasks/eadf25f4-f55b-42e8-aa2e-d929ffe0bede/update",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "W8ZAQ9xmeKIYDgFXtBDO1l7KIO86Q74pCx6uI4xLXubx3GDfsuINhpZI5ND1Bu6CiQsX06iW",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"title\": \"sadsadas\",\n\t\"description\": \"asdasdas\",\n\t\"priority\": \"low\",\n\t\"type\": \"impediment\",\n\t\"assignToIds\": [\n\t \"78fcbf6c-accf-4ba1-a943-7951855e9bef\"\n\t],\n\t\"status\": \"pending\"\n\t\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Delete task for project",
+      "request": {
+        "url": "localhost:3000/projects/efa10ac8-19ee-4273-8836-66c3045eafc1/tasks/eadf25f4-f55b-42e8-aa2e-d929ffe0bede/delete",
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "auth-token",
+            "value": "W8ZAQ9xmeKIYDgFXtBDO1l7KIO86Q74pCx6uI4xLXubx3GDfsuINhpZI5ND1Bu6CiQsX06iW",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "Status change for Task ",
+      "request": {
+        "url": "localhost:3000/projects/efa10ac8-19ee-4273-8836-66c3045eafc1/tasks/eadf25f4-f55b-42e8-aa2e-d929ffe0bede/change-status",
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "auth-token",
+            "value": "6IFdKGvgYY76JyrNxhksL0ASB8x1SsmRYlNNkMUE2MNSFVux0FXVJEPnNYhdBtUdWghjKPdl",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"status\": \"compeleted\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}
